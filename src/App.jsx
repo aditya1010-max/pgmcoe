@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 
 function App() {
+  
   const [copied, setCopied] = useState(null);
 
   // Store all 6 practical codes directly in frontend
