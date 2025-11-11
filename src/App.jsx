@@ -5,14 +5,45 @@ function App() {
 
   // Store all 6 practical codes directly in frontend
   const codes = {
-    1: `# Practical 1 - Conflation Algorithm
-def stem_word(word):
-    suffixes = ['ing', 'ed', 's']
-    for s in suffixes:
-        if word.endswith(s):
-            return word[:-len(s)]
-    return word
-print(stem_word('playing'))`,
+    1: `import numpy as np
+
+import tensorflow as tf
+print(tf.__version__)
+
+
+from keras import datasets
+# Load MNIST datasets from keras
+(train_images, train_labels), (test_images, test_labels) = datasets.mnist.load_data()
+
+train_images.shape
+
+test_images.shape
+
+
+import theano.tensor as T
+from theano import function
+
+
+# Declaring 2 variables
+x = T.dscalar('x')
+y = T.dscalar('y')
+
+# Summing up the 2 numbers
+z = x + y
+
+# Converting it to a callable object so that it takes matrix as parameters
+f = function([x, y], z)
+
+f(5, 7)
+
+
+import torch
+import torch.nn as nn
+
+print(torch.__version__)
+
+
+torch.cuda.is_available()`,
 
     2: `# Practical 2 - Single-pass clustering
 docs = ["apple banana", "apple fruit", "car bus", "bus train"]
